@@ -15,8 +15,8 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
+<body class="hold-transition login-page" style="background-color: rgb(145, 190, 145)">
+<div class="login-box" >
     <div class="login-logo">
         <a href="{{ url('/home') }}"><b>Systéme de Suivi des Matériels</b></a>
     </div>
@@ -25,8 +25,11 @@
     <!-- /.login-box-body -->
     <div class="card">
         <div class="card-body login-card-body">
+            <img src="{{URL::asset('/img/logo.png')}}" style="padding-bottom: 10%">
+           {{-- 
             <p class="login-box-msg">Connectez-vous pour démarrer votre session</p>
-
+ --}}       
+            &nbsp;&nbsp;
             <form method="post" action="{{ url('/login') }}">
                 @csrf
 
@@ -68,8 +71,8 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
-                        <button type="submit" class="btn btn-primary btn-block">S'identifier</button>
+                    <div class="col-6" >
+                        <button class="btn btn-success btn-lg float-right" type="submit">S'idenfier</button>
                     </div>
 
                 </div>
